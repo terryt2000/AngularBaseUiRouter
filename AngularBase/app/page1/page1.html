@@ -1,0 +1,17 @@
+<div>
+    <h2>Page 1</h2>
+    <button class="btn btn-info" data-ng-click="vm.goHome()">Click Me to go home</button>
+    <div class="row">
+        <div class="col-sm-3">
+            <ul class="nav nav-pills nav-stacked scrollable-list">
+                <li data-ng-class="{'active': vm.selectedItem == item}" data-ng-repeat="item in vm.data">
+                    <a data-ng-click="vm.selectItem(item)"><span data-ng-bind="item.name"></span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-9">
+            <div ui-view="itemContent"></div>
+        </div>
+    </div>
+
+</div>
